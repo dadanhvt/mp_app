@@ -1,0 +1,22 @@
+{
+  "name": "mappi",
+  "version": "1.0.0",
+  "description": "Mappi go gobal",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dadanhvt/mp_app.git"
+  },
+  "author": "danhvt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dadanhvt/mp_app/issues"
+  },
+  "homepage": "https://github.com/dadanhvt/mp_app#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
