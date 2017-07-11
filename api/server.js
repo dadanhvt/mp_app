@@ -1,7 +1,9 @@
 var express = require('express');
 var morgan = require('morgan');
 var mongoose = require('mongoose');
+var User = require('./models/user');
 var bodyParser = require('body-parser');
+var session	= require('express-session');
 
 var app = express();
 
@@ -10,6 +12,11 @@ var socketEvents = require('./socketEvents/index');
 var router = require('./routers/index');
 mongoose.connect(config.database);
 
+app.use(session({
+	secret: config.sessionSecret,
+	saveUninitialized: true,
+	resave: true
+}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
